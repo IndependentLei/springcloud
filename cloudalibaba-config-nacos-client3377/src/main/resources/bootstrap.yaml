@@ -2,16 +2,20 @@ server:
   port: 3377
 spring:
   profiles:
+#    active: prod
+  #    active: test
     active: dev
   application:
     name: nacos-config-client
   cloud:
     nacos:
       discovery:
-        server-addr: http://101.132.65.76:8848/ #配置Nacos的地址
+        server-addr: 101.132.65.76:8848 #配置Nacos的地址
       config:
-        server-addr: http://101.132.65.76:8848/ #配置Nacos的地址
+        server-addr: 101.132.65.76:8848 #配置Nacos的地址
         file-extension: yaml #指定yaml格式的配置
+        group: PROD_GROUP  # 分组
+        namespace: 67d91eb4-2e58-4f7b-ab07-f47e8fdd7172
 
 # ${spring.application.name}-${spring-profile-active}-${spring-cloud-nacos-config-file-extension}
 # nacos-config-client-dev.yaml # 公式
