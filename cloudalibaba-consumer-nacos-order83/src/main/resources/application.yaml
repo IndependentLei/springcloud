@@ -7,6 +7,9 @@ spring:
     nacos:
       discovery:
         server-addr: 101.132.65.76:8848 #配置Nacos的地址
+    loadbalancer:
+      retry:
+        enabled: false
 
 server-url: # 消费者将要去访问的微服务名称（注册成功进nacos的微服务提供者）
   nacos-user-service: http://nacos-payment-provider

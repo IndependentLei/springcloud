@@ -7,9 +7,9 @@
         <groupId>com.example</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>cloudalibaba-consumer-nacos-order83</artifactId>
+    <artifactId>cloudalibaba-sentinal-service8401</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>cloudalibaba-consumer-nacos-order83</name>
+    <name>cloudalibaba-sentinal-service8401</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -29,6 +29,14 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
@@ -36,16 +44,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.example</groupId>
-            <artifactId>cloud-api-commons</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -88,7 +87,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.7.RELEASE</version>
                 <configuration>
-                    <mainClass>com.example.cloudalibabaconsumernacosorder83.CloudalibabaConsumerNacosOrder83Application</mainClass>
+                    <mainClass>com.example.cloudalibabasentinalservice8401.CloudalibabaSentinalService8401Application</mainClass>
                 </configuration>
                 <executions>
                     <execution>

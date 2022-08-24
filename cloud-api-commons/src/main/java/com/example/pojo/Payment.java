@@ -7,10 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class Payment {
-    private Long id;
+    private String id;
     private String serial;
 }

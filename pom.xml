@@ -7,8 +7,8 @@
     <artifactId>springcloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <modules>
-        <module>cloud-provider-payment8001</module>
-        <module>cloud-consumer-order80</module>
+        <module>payment</module>
+        <module>order80Application</module>
         <module>cloud-api-commons</module>
         <module>cloud-eureka-server7001</module>
         <module>cloud-eureka-server7002</module>
@@ -26,6 +26,7 @@
         <module>cloudalibaba-provider-payment9002</module>
         <module>cloudalibaba-consumer-nacos-order83</module>
         <module>cloudalibaba-config-nacos-client3377</module>
+        <module>cloudalibaba-sentinal-service8401</module>
     </modules>
     <name>springcloud</name>
     <packaging>pom</packaging>
