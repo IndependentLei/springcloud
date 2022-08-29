@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableFeignClients
+@EnableFeignClients(basePackages = {"com.example.cloudalibabaconsumernacosorder84.proxy"})
 public class CloudalibabaConsumerNacosOrder84Application {
 
     public static void main(String[] args) {
