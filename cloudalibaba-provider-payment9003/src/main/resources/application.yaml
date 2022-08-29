@@ -7,9 +7,13 @@ spring:
     nacos:
       discovery:
         server-addr: 101.132.65.76:8848 #配置Nacos的地址
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #配置sentinel dashboard地址
+        port: 8719
 
 management:
-  endpoint:
+  endpoints:
     web:
       exposure:
         include: '*'

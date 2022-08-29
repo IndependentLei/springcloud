@@ -27,6 +27,7 @@ public class PaymentController {
             String serial = finalMap.get(id);
             return new CommentResult<>(200,"ok",new Payment(id,serial));
         }
+        finalMap.get(id).toCharArray();
         return new CommentResult<>(200,"no found",new Payment(id,"no found"));
     }
 }

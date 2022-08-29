@@ -7,7 +7,6 @@
         <groupId>com.example</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.example</groupId>
     <artifactId>cloudalibaba-consumer-nacos-order84</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>cloudalibaba-consumer-nacos-order84</name>
@@ -41,6 +40,14 @@
             <groupId>com.example</groupId>
             <artifactId>cloud-api-commons</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.csp</groupId>
+            <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

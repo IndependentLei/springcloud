@@ -42,7 +42,7 @@ public class PaymentController {
      * @return
      */
     @GetMapping("/getPaymentById/{id}")
-    public CommentResult getPaymentById(@PathVariable("id") Long id ){
+    public CommentResult getPaymentById(@PathVariable("id") String id ){
         Payment payment = paymentService.getPaymentById(id);
         return  payment == null ? new CommentResult<>(400,"没有该订单,serverPort:"+serverPort,null) : new CommentResult(200,"查询成功,serverPort:"+serverPort,payment);
     }

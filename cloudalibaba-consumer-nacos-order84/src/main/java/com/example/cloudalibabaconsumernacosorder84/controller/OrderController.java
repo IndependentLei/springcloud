@@ -20,4 +20,9 @@ public class OrderController {
     public CommentResult<Payment> getPayment(@PathVariable("id") String id){
         return orderProxy.getPayment(id);
     }
+
+    @GetMapping("/consumer/order/persistence")
+    public String persistence(){
+        return "----------persistence-----------";
+    }
 }

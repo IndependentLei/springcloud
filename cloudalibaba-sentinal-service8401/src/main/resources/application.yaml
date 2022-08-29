@@ -9,8 +9,11 @@ spring:
         server-addr: 101.132.65.76:8848
     sentinel:
       transport:
-        dashboard: 101.132.65.76:8080
+        dashboard: localhost:8080
         port: 8719 # 端口
-        clientIp: 101.132.65.76
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

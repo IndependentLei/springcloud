@@ -8,5 +8,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface PaymentDao extends BaseMapper<Payment>{
     int create(Payment payment);
-    Payment getPaymentById(Long id);
+    Payment getPaymentById(String id);
 }

@@ -7,10 +7,25 @@ spring:
     nacos:
       discovery:
         server-addr: 101.132.65.76:8848 #配置Nacos的地址
-    loadbalancer:
-      retry:
-        enabled: false
+    sentinel:
+      transport:
+        dashboard: localhost:8080 #配置sentinel dashboard地址
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 101.132.65.76:8848
+            dataId: nacos-comsumer-order
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 feign:
   sentinel:
-    enable: true
+    enabled: true

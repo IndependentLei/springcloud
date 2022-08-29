@@ -23,7 +23,7 @@ public class PaymentServiceImpl extends ServiceImpl<PaymentDao , Payment> implem
     }
 
     @Override
-    public Payment getPaymentById(Long id) {
+    public Payment getPaymentById(String id) {
         return paymentDao.getPaymentById(id);
     }
 }
