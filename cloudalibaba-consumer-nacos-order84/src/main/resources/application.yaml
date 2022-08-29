@@ -1,0 +1,14 @@
+server:
+  port: 84
+spring:
+  application:
+    name: nacos-comsumer-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 101.132.65.76:8848 #配置Nacos的地址
+    loadbalancer:
+      retry:
+        enabled: false
+
+feign:
