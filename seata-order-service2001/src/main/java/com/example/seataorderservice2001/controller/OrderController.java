@@ -19,11 +19,11 @@ public class OrderController {
 
     @PostMapping("/create")
     public CommentResult<Boolean> createOrder(@RequestBody Order order){
-        return new CommentResult<>(200,"ok",orderService.save(order));
+        return new CommentResult<>(200,"ok",orderService.create(order));
     }
 
     @PostMapping("/update")
     public CommentResult<Boolean> updateOrder(@RequestBody Order order){
-        return new CommentResult<>(200,"ok",orderService.updateById(order));
+        return new CommentResult<>(200,"ok",orderService.updateByUserId(order));
     }
 }

@@ -14,6 +14,6 @@ public class Order {
     private Long userId;
     private Long productId;
     private Integer count;
-    private BigDecimal money;
+    private Long money;
     private Integer status; // 状态 0：创建中，1已完成
 }

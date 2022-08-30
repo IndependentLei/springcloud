@@ -4,10 +4,7 @@ import com.example.pojo.CommentResult;
 import com.example.pojo.Storage;
 import com.example.seatastorageservice2002.Service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/storage")
@@ -17,7 +14,7 @@ public class StorageController {
     StorageService storageService;
 
     @PostMapping("/update")
-    public CommentResult<Boolean> updateStorage(@RequestBody Storage storage){
-        return new CommentResult<>(200,"ok",storageService.updateById(storage));
+    public CommentResult<Boolean> updateStorage(@RequestParam("productId") Long productId, @RequestParam("count") Integer count){
+        return new CommentResult<>(200,"ok",storageService.subtract(productId,count));
     }
 }

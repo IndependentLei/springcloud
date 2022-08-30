@@ -4,4 +4,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.example.pojo.Storage;
 
 public interface StorageService extends IService<Storage> {
+    Boolean subtract(Long productId, Integer count);
 }

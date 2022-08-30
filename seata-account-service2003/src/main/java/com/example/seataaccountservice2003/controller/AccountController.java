@@ -4,10 +4,9 @@ import com.example.pojo.Account;
 import com.example.pojo.CommentResult;
 import com.example.seataaccountservice2003.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigDecimal;
 
 @RestController
 @RequestMapping(value = "/account")
@@ -17,7 +16,7 @@ public class AccountController {
 
 
     @PostMapping("/update")
-    public CommentResult<Boolean> updateAccount(@RequestBody Account account){
-        return new CommentResult<>(200,"ok",accountService.updateById(account));
+    public CommentResult<Boolean> updateAccount(@RequestParam("userId") Long userId, @RequestParam("money") Long money){
+        return new CommentResult<>(200,"ok",accountService.subtract(userId,money));
     }
 }
